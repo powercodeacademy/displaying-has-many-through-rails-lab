@@ -38,5 +38,7 @@ Rails.application.configure do
   config.active_support.deprecation = :stderr
 
   # Raises error for missing translations
+
+  # All config.assets.* lines removed for Rails 7.1 compatibility
   # config.action_view.raise_on_missing_translations = true
 end

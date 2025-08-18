@@ -38,8 +38,20 @@ jspm_packages
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
+/log/*
+!log/.keep
+/tmp/
+/config/master.key
+/config/credentials.yml.enc
+/public/assets
+/public/packs
+/node_modules
+/yarn-error.log
+/coverage/
+/byebug_history
 
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
 /tmp
+config/secrets.yml
