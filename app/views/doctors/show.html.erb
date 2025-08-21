@@ -4,7 +4,7 @@
   <% @doctor.appointments.each do |appointment| %>
     <li>
       <%= appointment.formatted_datetime %>
-      <%= link_to appointment.patient.name, patient_path(appointment.patient) %>
+      <%= link_to appointment.patient.name, appointment.patient %>
     </li>
   <% end %>
 </ul>
