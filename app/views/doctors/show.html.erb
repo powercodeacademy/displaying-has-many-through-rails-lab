@@ -1,10 +1,10 @@
 <h2>Doctor Name: <%= @doctor.name %></h2>
 <h4>Department: <%= @doctor.department %></h4>
 <p>
-  Appointment Info: <%= @doctor.appointments %>
+  Total Appointment: <%= @doctor.appointments.count %>
 </p>
-Patient Appointments:
 <br />
+Patient Appointments:
 <br />
   <% @doctor.appointments.each do |appt| %>
     Appt time: <%= appt.appointment_datetime.strftime("%B %d, %Y at %H:%M") %><br>
