@@ -1,2 +1,17 @@
-<h1>Doctors#show</h1>
-<p>Find me in app/views/doctors/show.html.erb</p>
+<h1>Dr. <%= @doctor.name %> (<%= @doctor.department %>)</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Date & Time</th>
+      <th>Patient Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @doctor.appointments.each do |appt| %>
+      <tr>
+        <td><%= appt.formatted_datetime %></td>
+        <td><%= appt.patient.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
