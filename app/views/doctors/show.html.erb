@@ -5,7 +5,7 @@
 <ul>
   <% @doctor.appointments.each do |appointment|%>
     <li><%= appointment.appointment_datetime.strftime("%B %e, %Y at %l:%M") %>
-    - <%= appointment.patient.name %>
+    - <%= link_to appointment.patient.name, appointment.patient %>
     </li>
   <% end %>
 </ul>
