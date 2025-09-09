@@ -19,9 +19,9 @@ First, fork and clone this lab.
 
 You'll need to create all of the migrations, models, controllers, and views for this lab.
 
-**_NOTE_**: As with much of our Rails curriculum, remember to always use the `--no-test-framework` flag when you generate models, controllers, etc. That way, the Rails generators will not create additional tests on top of the test suite that already comes with the lesson. E.g., `rails g model User username:string email:string --no-test-framework`.
+**_NOTE_**: Always use the `--no-test-framework` flag when you generate models, controllers, etc. This prevents Rails generators from creating additional tests. E.g., `bin/rails g model User username:string email:string --no-test-framework`.
 
-**_Additional note about routes and generators_**: We've written the routes for you in the `config/routes.rb` file, so be sure to use the `--skip-routes` flag. This prevents the Rails generators from adding any unnecessary routes. You can use however many flags you need in the generators, so something like `rails g model Post title:string content:text --no-test-framework --skip-routes` is perfectly valid. (If you want to see what other flags and options are available, you can run commands such as `rails g --help` and `rails g model --help`.)
+**_Additional note about routes and generators_**: The routes are provided in the `config/routes.rb` file, so use the `--skip-routes` flag to prevent unnecessary routes. You can use multiple flags in generators, e.g., `bin/rails g model Post title:string content:text --no-test-framework --skip-routes` is valid. For more options, run `bin/rails g --help` and `bin/rails g model --help`.
 
 - Create migrations and models for doctor, patient, and appointment. Because this is for a hospital, a doctor can have many patients, but a patient can also have many doctors. Patients and doctors both have many appointments.
 
@@ -37,4 +37,4 @@ You'll need to create all of the migrations, models, controllers, and views for 
 
 - Create an `Appointment#show` page that shows the date, time, patient, and doctor for that particular appointment. Note that there should NOT be an `Appointment#index` page –– we don't want to have all of the appointments on display for anyone to see.
 
-We've provided a seed file so you can have some data to play around with –– run `rake db:seed` once your migrations and models are complete.
+We've provided a seed file so you can have some data to play around with –– run `bin/rails db:seed` once your migrations and models are complete.
